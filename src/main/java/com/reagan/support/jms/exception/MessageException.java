@@ -6,7 +6,7 @@ package com.reagan.support.jms.exception;
  * @date 2013年8月27日
  * @author Reading.Reagan
  * @version 1.0
- * <p>Company:Mopon</p>
+ * <p>Company:reagan</p>
  * <p>Copyright:Copyright(c)2013</p>
  */
 public class MessageException extends Exception {
