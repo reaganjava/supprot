@@ -20,15 +20,17 @@ import com.reagan.support.repository.IRepositoryDao;
  * <p>Company:Mopon</p>
  * <p>Copyright:Copyright(c)2013</p>
  */
-@Repository
 public class MongoRepositoryDaoImpl implements IRepositoryDao {
 	
 	/**
 	 * MongoDB模板类
 	 */
-	@Autowired
     private MongoTemplate mongoTemplate;
 	
+	public void setMongoTemplate(MongoTemplate mongoTemplate) {
+		this.mongoTemplate = mongoTemplate;
+	}
+
 	/** 
 	 * 方法用途: 创建表
 	 * 实现步骤: 表不存在时创建<br>
