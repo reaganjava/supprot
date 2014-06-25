@@ -2,6 +2,7 @@ package com.reagan.support.repository;
 
 import java.util.List;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
@@ -31,9 +32,9 @@ public interface IRepositoryDao {
 	
 	public List<? extends Object> findAll(String collectionName, Class<?> clazz);
     
-	public Object findById(Class<?> clazz,Object id);
+	public Object findById(Class<?> clazz, ObjectId id);
 	
-	public Object findById(String collectionName, Class<?> clazz, Object id);
+	public Object findById(String collectionName, Class<?> clazz, ObjectId id);
     
 	public List<? extends Object> find(Class<?> clazz, Query query);
 	

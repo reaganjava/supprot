@@ -3,11 +3,10 @@ package com.reagan.support.repository.mongodb;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
-import org.springframework.stereotype.Repository;
 
 import com.reagan.support.repository.IRepositoryDao;
 
@@ -123,7 +122,7 @@ public class MongoRepositoryDaoImpl implements IRepositoryDao {
    	 * @param id ID键值
    	 * @return 对象
    	 */
-    public Object findById(Class<?> clazz, Object id) {
+    public Object findById(Class<?> clazz, ObjectId id) {
         return mongoTemplate.findById(id, clazz);
     }
     
@@ -135,7 +134,7 @@ public class MongoRepositoryDaoImpl implements IRepositoryDao {
    	 * @param id ID键值
    	 * @return 对象
    	 */
-    public Object findById(String collectionName, Class<?> clazz, Object id) {
+    public Object findById(String collectionName, Class<?> clazz, ObjectId id) {
     	return mongoTemplate.findById(id, clazz, collectionName);
     }
 
