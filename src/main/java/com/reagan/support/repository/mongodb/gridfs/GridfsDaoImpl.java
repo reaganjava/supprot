@@ -30,7 +30,6 @@ public class GridfsDaoImpl implements IGridfsDao {
 		gridFS = new GridFS(fsTemplate.getDb());
 	}
 
-	@Override
 	public String save(InputStream in, GridFSFileInfo gridFSFileInfo) {
 		String pk = null;
 		DBObject query  = new BasicDBObject("_id", gridFSFileInfo.getId());
@@ -51,7 +50,6 @@ public class GridfsDaoImpl implements IGridfsDao {
 		return pk;
 	}
 
-	@Override
 	public void delete(String id) {
 		ObjectId objid= new ObjectId(id);
 		DBObject query  = new BasicDBObject("_id", objid);
